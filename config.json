@@ -1,0 +1,25 @@
+{
+  "params":
+  {
+    "local_url": "mysql+pymysql://root:@localhost/python_database",
+    "fb_url": "https://facebook.com/python_database",
+    "tw_url": "https://twitter.com/python_database",
+    "gh_url": "https://github.com/indurkhya?tab=repositories",
+    "blog_name": "Reliance Jio",
+    "tag_line": "Sabka sath sabska vikas",
+    "about_content": "Hello welcome to about section",
+    "title_name": "Blogger.com",
+    "main_name": "My Blogs",
+    "tag_line": "Be active to blog in Devops portal",
+    "gmail_user": "saksham.indurkhya94@gmail.com",
+    "gmail_password": "Saksham@123",
+    "no_of_posts": 2,
+    "login_image": "login.jpg",
+    "admin-user": "saksham",
+    "admin-user": "harsh",
+    "admin-pass": "Saksham@123",
+    "admin-pass": "Harsh@123",
+    "about_image": "about-bg.jpg",
+    "file_uploader": "C:\\Users\\Saksham\\Documents"
+  }
+}

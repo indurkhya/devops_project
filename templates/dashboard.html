@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static',filename='img/home-bg.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h2>Admin Panel</h2>
+            <span class="subheading">Here we manage our post.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 mx-auto">
+      <h2> Basic Actions</h2>
+<!--      <a href="/edit/0"><button class="btn btn-primary float-right">Add post</button></a><br><br>-->
+<!--      <hr>-->
+      <a href="/dashboard"><button class="btn btn-primary float-right">Dashboard Home</button></a><br><br>
+      <hr>
+<!--      <a href="/logout"><button class="btn btn-primary float-right">Logout</button></a><br><br>-->
+<!--      <hr>-->
+      <h2>Upload a file</h2>
+          <form action="/uploader" method="post" enctype="multipart/form-data">
+
+            <input type="file" name="file1">
+            <button type="submit" class="btn btn-primary float-right">Submit</button><br><br>
+          </form>
+      <hr>
+<!--  <div class="col-lg-15 col-md-15 mx-auto">-->
+  <h2>Edit post</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Sno.</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <tr>
+        <td>{{post.sno}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.date}}</td>
+        <td><a href="/edit/{{post.sno}}"><button class="btn btn-primary float-right">Edit</button></a></td>
+        <td><a href="/delete/{{post.sno}}"><button class="btn btn-primary float-right">Delete</button></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  </div>-->
+
+{% endblock %}
